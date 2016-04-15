@@ -439,6 +439,7 @@ class YowsupCliLayer(Cli, YowInterfaceLayer):
 
     @clicmd("Print inbox")
     def inbox_print(self):
+        print("==== START INBOX ====")
         for message in self.inBox:
             messageOut = ""
             if message.getType() == "text":
@@ -460,7 +461,8 @@ class YowsupCliLayer(Cli, YowInterfaceLayer):
                 MESSAGE_ID=message.getId()
             )
             print(output)
-
+        print("==== END INBOX ====")
+    
     @clicmd("Send a video with optional caption")
     def video_send(self, number, path, caption=None):
         self.media_send(number, path, RequestUploadIqProtocolEntity.MEDIA_TYPE_VIDEO)
