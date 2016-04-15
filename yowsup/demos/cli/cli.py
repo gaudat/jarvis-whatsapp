@@ -177,7 +177,7 @@ class Cli(object):
         if tag is not None:
             print("%s: %s" % (tag, message))
         else:
-            print(message)
+            print(message.decode('utf8'))
         if prompt:
             self.printPrompt()
 

@@ -25,10 +25,14 @@ def get_cmd_send_message(recipient,message):
 /sleep %s
 /disconnect
 /quit
-""" % recipient,message,timeout
+""" % (recipient,message,timeout)
 
-def get_received_messages():
+def receive_messages():
     p = subprocess.Popen(args,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
     o,e = p.communicate(input=get_cmd_receive_message())
-    print(o)
+    print((o,e))
 
+def send_message(message,recipient=group_jid):
+    p = subprocess.Popen(args,stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE)
+    o,e = p.communicate(input=get_cmd_send_message(recipient,message))
+    print((o,e))
