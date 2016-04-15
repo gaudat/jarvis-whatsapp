@@ -1,0 +1,64 @@
+Yowsup Cli client
+==================
+Type /help for available commands
+
+[offline]:Auth: Logged in!
+[connected]:----------------------------------------------
+/help                                                       Print this message  
+/seq                                                        Send init seq       
+/presence      available                                    Set presence as available
+/presence      subscribe      <contact>                     Subscribe to contact's presence updates
+/presence      unsubscribe    <contact>                     Unsubscribe from contact's presence updates
+/presence      name           <name>                        Set presence name   
+/presence      unavailable                                  Set presence as unavailable
+/image         send           <number> <path> [caption]     Send an image with optional caption
+/sleep                        <seconds>                     Pauses script execution for specified time
+/inbox         print                                        Print inbox         
+/message       broadcast      <numbers> <content>           Broadcast message. numbers should comma separated phone numbers
+/message       autoread       <enable>                      Automatically send read receipts
+/message       read           <message_id>                  Send read receipt   
+/message       send           <number> <content>            Send message to a friend
+/message       delivered      <message_id>                  Send delivered receipt
+/ib            clean                                        Send clean dirty    
+/statuses      get            <contacts>                    Request contacts statuses
+/quit                                                       Quits yowsay        
+/disconnect                                                 Disconnect          
+/contacts      sync           <contacts>                    Sync contacts, contacts should be comma separated phone numbers, with no spaces
+/ping                                                       Ping server         
+/state         paused         <jid>                         Send paused state   
+/state         typing         <jid>                         Send typing state   
+/profile       setPrivacy      [value] [names]              Profile privacy. value=all|contacts|none names=profile|status|last. Names are comma separated, defaults to all.
+/profile       setPicture     <path>                        Set profile picture 
+/profile       getPrivacy                                   Get profile privacy 
+/profile       setStatus      <text>                        Set status text     
+/keys          set                                          Send prekeys        
+/keys          get            <jids>                        Get shared keys     
+/L                                                          Quick login         
+/groups        create         <subject> [jids]              Create a new group with the specified subject and participants. Jids are a comma separated list but optional.
+/groups        list                                         List all groups you belong to
+/group         info           <group_jid>                   Get group info      
+/group         picture        <group_jid> <path>            Set group picture   
+/group         invite         <group_jid> <jids>            Invite to group. Jids are a comma separated list
+/group         leave          <group_jid>                   Leave a group you belong to
+/group         setSubject     <group_jid> <subject>         Change group subject
+/group         demote         <group_jid> <jids>            Remove admin of a group. Jids are a comma separated list
+/group         promote        <group_jid> <jids>            Promote admin of a group. Jids are a comma separated list
+/group         kick           <group_jid> <jids>            Kick from group. Jids are a comma separated list
+/account       delete                                       Delete your account 
+/contact       picture        <jid>                         Get profile picture for contact
+/contact       picturePreview <jid>                         Get profile picture preview for contact
+/contact       lastseen       <jid>                         Get lastseen for contact
+/video         send           <number> <path> [caption]     Send a video with optional caption
+/login                        <username> <b64password>      Login to WhatsApp   
+/audio         send           <number> <path>               Send audio file     
+----------------------------------------------
+[connected]:[connected]:Iq:
+ID: 1
+Type: result
+from: g.us
+Groups:
+ID: 85268794568-1453974029, Subject: Group 168 IDP, Creation: 1453974029, Creator: 85268794568@s.whatsapp.net, Subject Owner: 85268794568@s.whatsapp.net, Subject Time: 1453974029
+Participants: 85268794568@s.whatsapp.net, 85255654782@s.whatsapp.net, 85292056288@s.whatsapp.net, 85266224200@s.whatsapp.net, 85256441417@s.whatsapp.net
+
+[connected]:general: Disconnected: Requested
+[connected]:
