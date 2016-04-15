@@ -432,6 +432,8 @@ class YowsupCliLayer(Cli, YowInterfaceLayer):
 
     @clicmd("Quits yowsay")
     def quit(self):
+        import sys
+        sys.stdout.flush()
         import os
         os._exit(0)
 
